@@ -7,11 +7,11 @@
   <title>About</title>
 </head>
 <body>
-  <h1>{{pageName}} </h1>
+  <!-- here title of the page is imported from the partials -->
+  {{> header}}
   <p>Random text here...</p>
 
-  <footer>
-    <p>copyrigt {{currentYear}}</p>
-  </footer>
+  {{> footer}}
+  <!-- this is the syntax for adding paritals -->
 </body>
 </html>

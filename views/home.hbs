@@ -7,12 +7,10 @@
   <title>Home</title>
 </head>
 <body>
-  <h1>{{pageName}} </h1>
-  <h2> {{welcomeMsg}}</h2>
+  {{> header}}
+  <h2> {{upperCaseIt welcomeMsg}}</h2>
   <p>Random text here...</p>
 
-  <footer>
-    <p>copyrigt {{currentYear}}</p>
-  </footer>
+ {{> footer}}
 </body>
 </html>
