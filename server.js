@@ -3,6 +3,7 @@ const fs = require('fs');
 const hbs = require('hbs'); // adding the bandlebars -> https://handlebarsjs.com/
 var app = express(); // here we initialize app vairable by calling express function
 
+const port = process.env.PORT || 3000; // here we are going to declear the port
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine','hbs');   // Using hbs as the default view engine requires just one line of code in your app setup. This will render .hbs files when res.render is called
 
@@ -68,6 +69,6 @@ app.get('/bad',(req,res) => {
   });
 });
 
-app.listen(3000, ()=>{
-  console.log('App is running on the port 3000');
+app.listen(port, ()=>{
+  console.log(`App is running on the port ${port}`);
 }); // here we bind the app with port of the machine.
