@@ -63,6 +63,13 @@ app.get('/about',(req,res) =>{
   }); // it will render the about.hbs page from view folder, here the second agument  in the render function passes the data in the about.hbs page
 });
 
+app.get('/portfolio',(req,res) =>{
+  res.render('portfolio.hbs', {
+    pageName: 'Portfolio',
+    welcomeMsg: 'welcome to portfolio page !'
+  });
+});
+
 app.get('/bad',(req,res) => {
   res.send({
     errorMessage: 'Unable to handle request'
